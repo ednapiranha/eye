@@ -241,8 +241,9 @@ input, textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #f1f1f1;
+    background-color: #222;
     border: 0;
+    color: #eee;
     font-family: Arial, sans-serif;
     font-size: 16px;
     padding: 10px;
@@ -344,6 +345,7 @@ ul.manage a {
 #footer {
     background-color: rgba(3, 3, 3, 0.5);
     bottom: 0;
+    box-shadow: inset #111 2px 0 3px;
     position: fixed;
     width: 100%;
 }
@@ -386,16 +388,17 @@ ul.manage a {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
-    padding: 0 5px;
+    margin-top: 15px;
     width: 100%;
 }
 
 .pagination a {
-    background-color: #59d5bc;
-    color: #fff;
-    font-size: 35px;
+    background-color: rgba(32, 32, 32, 0.6);
+    color: #eee;
     display: inline-block;
-    padding: 15px;
+    font-size: 40px;
+    font-weight: 600;
+    padding: 8px 15px;
 }
 
 .pagination .prev {
@@ -418,12 +421,6 @@ ul.manage a {
     clear: both;
     font-size: 25px;
     line-height: 30px;
-}
-
-@media only screen and (max-width: 1225px) {
-    .inner-container {
-        width: 940px;
-    }
 }
 
 @media only screen and (max-width: 800px) {
