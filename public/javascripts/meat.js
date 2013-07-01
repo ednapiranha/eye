@@ -23,16 +23,10 @@ define(['jquery', 'moment'],
     if (post.content.urls) {
       for (var i = 0; i < post.content.urls.length; i ++) {
         var url = post.content.urls[i];
-        var result = '';
 
-        if (url.url.match(/\.[jpg|jpeg|gif|png]\??/i)) {
-          result = '<a class="image" title="' +
-            url.title + '" style="background-image: url(' + url.url + ');">' +
-            '<img src="' + url.url + '"></a>';
-        } else {
-          result = '<a class="link" href="' + url.url + '" title="' +
-            url.title + '">' + url.title + '</a>';
-        }
+        var result = '<a class="image" title="' +
+          url.title + '" style="background-image: url(' + url.url + ');">' +
+          '<img src="' + url.url + '"></a>';
 
         urls.push('<li>' + result + '</li>');
       }

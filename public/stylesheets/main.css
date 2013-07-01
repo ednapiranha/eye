@@ -149,14 +149,13 @@ textarea {
 }
 
 article {
-    background-color: #111;
     clear: both;
     color: #444;
     display: inline-block;
     float: left;
     font-family: Arial, sans-serif;
     font-size: 20px;
-    margin: 5px auto;
+    height: 533px;
     position: relative;
     width: 800px;
 }
@@ -182,14 +181,6 @@ article p:empty {
     display: block;
     height: 533px;
     width: 800px;
-}
-
-body[data-page="index"] .image, body[data-page="landing"] .image, .subscriptions .image {
-    background-size: cover;
-}
-
-body[data-page="index"] .links img, body[data-page="landing"] .links img, .subscriptions .image img {
-    display: none;
 }
 
 body[data-page="post"] .messages .image {
