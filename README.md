@@ -1,12 +1,16 @@
-# General Toast
+# Eye
 
-This is a sample micro[b]log app using [meatspace](https://npmjs.org/package/meatspace).
+This is a story-based photoblog app using [meatspace](https://npmjs.org/package/meatspace).
+
+## What is a story-based photoblog?
+
+It's my attempt to encourage photographers to include a fantasy/fiction element in their photoblog using narrative.
 
 ## Installation
 
 ### Clone the repository
 
-> git clone -b leveldb git://github.com/ednapiranha/generaltoast.git
+> git clonegit://github.com/ednapiranha/eye.git
 
 ### Install grunt
 
@@ -47,7 +51,3 @@ If you run this in dev, you don't need to do anything by default. If you run thi
 ## Run the server
 
 > node app.js
-
-## Subscribing to other meatspaces
-
-When you click on the 'S' in the top right hand corner after logging in, you can add urls to JSON feeds from other meatspace urls. For example, visiting [http://meatspace.generalgoods.net](http://meatspace.generalgoods.net) and clicking on 'Subscribe' gives you the feed for that site. Add that url to your subscription and your site will pull in the latest posts.
