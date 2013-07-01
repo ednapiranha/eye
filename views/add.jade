@@ -3,8 +3,6 @@ extend layout
 block content
   .container
     .form
-      h1 Add new
-
       form(method='post', action='/add', enctype='multipart/form-data')
         textarea(name='message')
         input(type='text', name='url', placeholder='url', autocomplete='off')

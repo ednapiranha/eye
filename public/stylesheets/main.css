@@ -52,6 +52,10 @@ html, body {
     position: relative;
 }
 
+body {
+    background-color: #111;
+}
+
 @font-face {
     font-family: 'OstrichSansBold';
     src: url('../fonts/ostrich-bold-webfont.woff') format('woff');
@@ -132,13 +136,6 @@ p.micro {
     letter-spacing: 0.01rem;
 }
 
-h1, h2 {
-    color: #24d3f8;
-    font-size: 40px;
-    margin-bottom: 5px;
-    padding-left: 5px;
-}
-
 textarea {
     height: 100px;
     width: 97%;
@@ -150,7 +147,6 @@ textarea {
 
 article {
     clear: both;
-    color: #444;
     display: inline-block;
     float: left;
     font-family: Arial, sans-serif;
@@ -160,7 +156,7 @@ article {
 }
 
 p {
-    color: #111;
+    color: #aaa;
     float: left;
     font-size: 22px;
     line-height: 25px;
@@ -176,6 +172,10 @@ article p:empty {
 
 .messages img {
     width: 100%;
+}
+
+form {
+    color: #eee;
 }
 
 .links .link {
@@ -338,7 +338,7 @@ ul.manage a {
 }
 
 #footer {
-    background-color: #eee;
+    background-color: rgba(3, 3, 3, 0.5);
     clear: both;
     float: left;
     margin-top: 40px;
@@ -350,11 +350,16 @@ ul.manage a {
 }
 
 #footer a {
-    color: #111;
+    color: #aaa;
     display: inline-block;
     font-family: 'OstrichSansBold', Arial, sans-serif;
     font-size: 22px;
     margin-right: 20px;
+    opacity: 0.3;
+}
+
+#footer:hover a {
+    opacity: 1.0;
 }
 
 #footer a:hover {
@@ -372,8 +377,8 @@ ul.manage a {
 }
 
 #logo:hover {
-    transform: rotate(120deg);
-    -webkit-transform: rotate(120deg);
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     transition: 0.5s;
     -webkit-transition: 0.5s;
 }
@@ -404,6 +409,7 @@ ul.manage a {
 }
 
 .cancel {
+    color: #eee;
     display: inline-block;
     font-family: Arial, sans-serif;
     float: left;
@@ -443,10 +449,6 @@ ul.manage a {
 @media only screen and (max-width: 616px) {
     form {
         margin-top: 10px;
-    }
-
-    h1 {
-        margin-top: 50px;
     }
 
     .form h1 {

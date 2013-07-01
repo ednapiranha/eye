@@ -111,7 +111,6 @@ define(['jquery', 'moment'],
   var self = {
     getAll: function () {
       getRecent();
-      body.find('h1').text('Recent');
     },
 
     getPaginated: function (self) {
@@ -123,7 +122,6 @@ define(['jquery', 'moment'],
         if (data.post) {
           var dateInfo = '<p class="created">' + moment.unix(data.post.content.created).fromNow() + '</p>';
           history.pushState(data.post, 'post ' + data.post.id, '/post/' + data.post.id);
-          body.find('h1').text('Post');
           body.attr('data-page', 'post')
               .attr('data-url', '/post/' + data.post.id);
           body.find('.messages').html(generatePost(data.post, data.isAdmin, false)).append(dateInfo);
