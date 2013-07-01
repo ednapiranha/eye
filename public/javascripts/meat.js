@@ -59,8 +59,9 @@ define(['jquery', 'moment'],
     }
 
     return $('<article id="post_' + post.id + '" class="article ' +
-      isPrivate + '"><p>' + breakify(post.content.message) + '</p>' + urls +
-      '<div class="actions">' + isAdmin + permalink + shared + '</div>' + location + '</article>');
+      isPrivate + '">' + urls +
+      '<div class="actions">' + isAdmin + permalink + shared + '</div>' + location +
+      '</article>' + '<p>' + breakify(post.content.message) + '</p>');
   };
 
   var getRecent = function (paginated) {
