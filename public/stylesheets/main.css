@@ -72,12 +72,6 @@ a {
     text-decoration: none;
 }
 
-p.micro {
-    color: #77e7ff;
-    font-family: Arial, sans-serif;
-    padding-bottom: 10px;
-}
-
 #header {
     position: fixed;
     right: 0;
@@ -141,10 +135,6 @@ p.micro {
     width: 800px;
 }
 
-.content {
-    letter-spacing: 0.01rem;
-}
-
 textarea {
     height: 100px;
     width: 97%;
@@ -169,8 +159,8 @@ article {
 p {
     color: #aaa;
     float: left;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 18px;
+    line-height: 23px;
     padding: 5px 0;
     text-align: left;
     text-overflow: ellipsis;
@@ -182,20 +172,6 @@ p {
 
 form {
     color: #eee;
-}
-
-.links .link {
-    background-color: rgba(1, 1, 1, 0.65);
-    bottom: 40px;
-    font-size: 16px;
-    left: 0;
-    overflow: hidden;
-    padding: 10px;
-    position: absolute;
-    right: 0;
-    text-align: left;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 body[data-page="post"] .content-container {
