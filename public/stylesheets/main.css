@@ -155,9 +155,8 @@ article {
     float: left;
     font-family: Arial, sans-serif;
     font-size: 20px;
-    height: 533px;
     position: relative;
-    width: 800px;
+    width: 100%;
 }
 
 p {
@@ -169,27 +168,13 @@ p {
     padding: 10px 0;
     text-align: left;
     text-overflow: ellipsis;
-    width: 800px;
 }
 
 article p:empty {
     display: none;
 }
 
-.links .image {
-    background-repeat: no-repeat;
-    display: block;
-    height: 533px;
-    width: 800px;
-}
-
-body[data-page="post"] .messages .image {
-    background-image: none;
-    height: 100%;
-    width: 100%;
-}
-
-body[data-page="post"] .messages img {
+.messages img {
     width: 100%;
 }
 
@@ -212,27 +197,13 @@ body[data-page="post"] .content-container {
     width: 100%;
 }
 
-body[data-page="post"] .messages {
+.messages {
     margin: 0 auto;
-    width: 800px;
-}
-
-body[data-page="post"] .messages article {
-    height: auto;
-    min-height: 240px;
-    width: 800px;
+    max-width: 800px;
 }
 
 body[data-page="post"] .messages .links:not(:empty) {
     height: 100%;
-}
-
-body[data-page="post"] .messages .links img {
-    max-width: 100%;
-}
-
-body[data-page="post"] .messages article p {
-    max-height: 150px;
 }
 
 .location {
@@ -313,7 +284,6 @@ article.private {
 
 ul.links li {
     height: 100%;
-    margin-bottom: 5px;
     overflow: hidden;
 }
 
@@ -454,37 +424,23 @@ ul.manage a {
     }
 }
 
-@media only screen and (max-width: 916px) {
-    .inner-container {
-        width: 640px;
+@media only screen and (max-width: 800px) {
+    .inner-container, .content-container {
+        height: 66%;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    p {
+        padding: 20px;
+    }
+
+    .created {
+        padding: 0 20px;
     }
 }
 
 @media only screen and (max-width: 616px) {
-    .inner-container {
-        width: 320px;
-    }
-
-    .content-container {
-        padding: 0;
-    }
-
-    body[data-page="post"] .messages {
-        width: 320px;
-    }
-
-    p.micro {
-        padding-bottom: 0;
-    }
-
-    article {
-        margin: 5px 15px;
-    }
-
-    body[data-page="post"] .messages article {
-        width: 290px;
-    }
-
     form {
         margin-top: 10px;
     }
@@ -498,25 +454,13 @@ ul.manage a {
         text-align: center;
     }
 
-    .messages, ul.subscriptions {
+    .messages {
         margin-top: 10px;
-    }
-
-    ul.subscriptions li {
-        width: 290px;
-    }
-
-    #footer a {
-        line-height: 35px;
     }
 }
 
 @media only screen and (max-width: 330px) {
     form {
         width: 300px;
-    }
-
-    ul.subscriptions li {
-        width: 260px;
     }
 }

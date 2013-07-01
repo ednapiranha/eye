@@ -25,7 +25,7 @@ define(['jquery', 'moment'],
         var url = post.content.urls[i];
 
         var result = '<a class="image" title="' +
-          url.title + '" style="background-image: url(' + url.url + ');">' +
+          url.title + '">' +
           '<img src="' + url.url + '"></a>';
 
         urls.push('<li>' + result + '</li>');

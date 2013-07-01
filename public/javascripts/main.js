@@ -11,14 +11,11 @@ define(['jquery', 'meat'],
 
     if (url) {
       if (url.indexOf('/post/') > -1 || url.indexOf('/edit/') > -1) {
-        if (url.indexOf('/edit/') > -1) {
-          body.find('.container.last').addClass('hidden');
-        } else {
+        if (url.indexOf('/edit/') < 0) {
           body.attr('data-page', 'post');
         }
         meat.getOne(body);
       } else if (url.indexOf('/recent') > -1 || url === '/') {
-        body.find('.container.last').removeClass('hidden');
         meat.getAll();
       } else {
         return;
