@@ -24,9 +24,9 @@ define(['jquery', 'moment'],
       for (var i = 0; i < post.content.urls.length; i ++) {
         var url = post.content.urls[i];
 
-        var result = '<a class="image" title="' +
-          url.title + '">' +
-          '<img src="' + url.url + '"></a>';
+        var result = '<a class="image" href="javascript:;" ' +
+          'title="/post/' + post.id + '"><img src="' + url.url +
+          '" data-action="get-post" data-url="/post/' + post.id + '"></a>';
 
         urls.push('<li>' + result + '</li>');
       }
@@ -41,10 +41,6 @@ define(['jquery', 'moment'],
         '<a href="javascript:;" data-url="/delete/' + post.id +
         '" data-action="delete-post" title="Delete">D</a>';
     }
-
-    permalink = '<a href="javascript:;" ' +
-      'data-action="get-post" data-url="/post/' + post.id + '" ' +
-      'class="permalink" title="Permalink">P</a>';
 
     if (post.meta.location) {
       post.meta.location = post.meta.location.replace(/\s/gi, '');
