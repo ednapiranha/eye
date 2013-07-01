@@ -292,7 +292,7 @@ ul.links a {
 }
 
 .actions {
-    bottom: 0;
+    bottom: 3px;
     position: absolute;
     right: -2px;
 }
