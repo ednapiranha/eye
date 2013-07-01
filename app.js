@@ -3,7 +3,7 @@ var configurations = module.exports;
 var app = express();
 var server = require('http').createServer(app);
 var nconf = require('nconf');
-var Meatspace = require('meatspace');
+var Meatspace = require('meatspace-leveldb');
 var settings = require('./settings')(app, configurations, express);
 var whitelist = require('./whitelist');
 
@@ -26,7 +26,7 @@ var meat = new Meatspace({
   username: nconf.get('username'),
   postUrl: nconf.get('url'),
   db: nconf.get('db'),
-  limit: 12
+  limit: 3
 });
 
 require('express-persona')(app, {

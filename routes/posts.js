@@ -8,7 +8,7 @@ module.exports = function (app, meat, nconf, isAdmin) {
 
   var utils = require('../lib/utils');
 
-  var PHOTO_WIDTH = 400;
+  var PHOTO_WIDTH = 800; // landscape always
   var upload = null;
 
   var escapeHtml = function (text) {
