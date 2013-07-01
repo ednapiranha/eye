@@ -57,10 +57,14 @@ body {
 }
 
 @font-face {
-    font-family: 'OstrichSansBold';
-    src: url('../fonts/ostrich-bold-webfont.woff') format('woff');
+    font-family: 'SourceSansProLight';
+    src: url('../fonts/SourceSansPro-Light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+#header a, .content, button, #footer a, .actions a {
+    font-family: 'SourceSansProLight', sans-serif;
 }
 
 a {
@@ -82,11 +86,10 @@ p.micro {
 }
 
 #header a {
-    background-color: #59d5bc;
+    background-color: rgba(37, 37, 37, 0.8);
     color: #fff;
     float: left;
-    font-family: 'OstrichSansBold', Arial, sans-serif;
-    font-size: 35px;
+    font-size: 25px;
     height: 35px;
     margin-right: 5px;
     outline: none;
@@ -96,17 +99,18 @@ p.micro {
 }
 
 #header a.sub {
-    font-size: 55px;
-    line-height: 40px;
+    font-size: 45px;
+    line-height: 30px;
 }
 
 #header a.mini {
-    font-size: 20px;
+    font-size: 17px;
     width: 65px;
 }
 
 #header a:hover, .pagination a:hover {
-    background-color: #3e99a4;
+    background-color: #eee;
+    color: #111;
 }
 
 #wrapper {
@@ -114,10 +118,16 @@ p.micro {
     position: relative;
 }
 
-.container, .inner-container, .form {
+.container, .form {
     clear: both;
     margin: 10px auto 0 auto;
     max-width: 1240px;
+}
+
+.inner-container {
+    float: left;
+    margin-bottom: 70px;
+    width: 100%;
 }
 
 .form {
@@ -132,7 +142,6 @@ p.micro {
 }
 
 .content {
-    font-family: 'OstrichSansBold', Arial, sans-serif;
     letter-spacing: 0.01rem;
 }
 
@@ -142,6 +151,7 @@ textarea {
 }
 
 .messages {
+    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -151,6 +161,7 @@ article {
     float: left;
     font-family: Arial, sans-serif;
     font-size: 20px;
+    margin-top: 20px;
     position: relative;
     width: 100%;
 }
@@ -158,16 +169,11 @@ article {
 p {
     color: #aaa;
     float: left;
-    font-size: 22px;
-    line-height: 25px;
-    margin-bottom: 20px;
-    padding: 10px 0;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 5px 0;
     text-align: left;
     text-overflow: ellipsis;
-}
-
-article p:empty {
-    display: none;
 }
 
 .messages img {
@@ -258,9 +264,8 @@ button {
     background-color: #28c6f4;
     border: 0;
     border-radius: 5px;
-    color: #fff;
+    color: #222;
     cursor: pointer;
-    font-family: 'OstrichSansBold', Arial, sans-serif;
     font-size: 22px;
     line-height: 22px;
     margin: 5px 0;
@@ -321,7 +326,6 @@ ul.manage a {
     display: inline-block;
     margin: 0 2px;
     padding: 6px 3px 3px;
-    font-family: 'OstrichSansBold', Arial, sans-serif;
     font-size: 22px;
     height: 20px;
     text-align: center;
@@ -339,31 +343,25 @@ ul.manage a {
 
 #footer {
     background-color: rgba(3, 3, 3, 0.5);
-    clear: both;
-    float: left;
-    margin-top: 40px;
+    bottom: 0;
+    position: fixed;
     width: 100%;
 }
 
 .footer-inner {
-    padding: 21px;
+    padding: 15px;
 }
 
 #footer a {
     color: #aaa;
     display: inline-block;
-    font-family: 'OstrichSansBold', Arial, sans-serif;
-    font-size: 22px;
-    margin-right: 20px;
+    font-size: 18px;
+    margin-right: 10px;
     opacity: 0.3;
 }
 
 #footer:hover a {
     opacity: 1.0;
-}
-
-#footer a:hover {
-    color: #77e7ff;
 }
 
 #logo {
@@ -372,7 +370,7 @@ ul.manage a {
     display: block;
     float: left;
     height: 40px;
-    margin: 10px 0 0 20px;
+    margin: 5px 0 0 20px;
     width: 40px;
 }
 
@@ -411,17 +409,15 @@ ul.manage a {
 .cancel {
     color: #eee;
     display: inline-block;
-    font-family: Arial, sans-serif;
     float: left;
-    font-size: 20px;
-    margin-top: 15px;
+    font-size: 25px;
+    margin-top: 20px;
 }
 
 .created {
     clear: both;
     font-size: 25px;
     line-height: 30px;
-    padding: 5px 0;
 }
 
 @media only screen and (max-width: 1225px) {
@@ -438,7 +434,7 @@ ul.manage a {
     }
 
     p {
-        padding: 20px;
+        padding: 5px 20px;
     }
 
     .created {

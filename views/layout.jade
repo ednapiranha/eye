@@ -18,13 +18,13 @@ html
     #wrapper
       .content
         block content
-      #footer
-        a(id='logo', href='http://meatspace.generalgoods.net', title='Meatspace')
-        .footer-inner
-          if session.isAdmin
-            a(href='javascript:;', data-action='logout') Log out
-          else
-            a(href='javascript:;', data-action='login') Admin login
+    #footer
+      a(id='logo', href='http://meatspace.generalgoods.net', title='Meatspace')
+      .footer-inner
+        if session.isAdmin
+          a(href='javascript:;', data-action='logout') Log out
+        else
+          a(href='javascript:;', data-action='login') Admin login
 
     #header
       a(href='/', title='Home') /
