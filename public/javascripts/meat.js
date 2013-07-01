@@ -48,20 +48,9 @@ define(['jquery', 'moment'],
         '" data-action="delete-post" title="Delete">D</a>';
     }
 
-    if (isSubscription) {
-      if (body.data('authenticated') === true) {
-        permalink = '<a href="javascript:;" data-action="share" data-url="' +
-          post.meta.originUrl + '" title="Share">S</a>';
-      }
-    } else {
-      permalink = '<a href="javascript:;" ' +
-        'data-action="get-post" data-url="/post/' + post.id + '" ' +
-        'class="permalink" title="Permalink">P</a>';
-    }
-
-    if (post.meta.isShared || isSubscription) {
-      shared = '<a href="' + post.meta.originUrl + '" title="Origin" target="_blank">O</a>';
-    }
+    permalink = '<a href="javascript:;" ' +
+      'data-action="get-post" data-url="/post/' + post.id + '" ' +
+      'class="permalink" title="Permalink">P</a>';
 
     if (post.meta.location) {
       post.meta.location = post.meta.location.replace(/\s/gi, '');
@@ -128,16 +117,6 @@ define(['jquery', 'moment'],
     getAll: function () {
       getRecent();
       body.find('h1').text('Recent');
-
-      $.getJSON('/subscription/all', function (data) {
-        if (data.posts) {
-          body.find('.subscriptions').empty();
-
-          for (var i = 0; i < data.posts.length; i ++) {
-            body.find('.subscriptions').append(generatePost(data.posts[i], false, true));
-          }
-        }
-      });
     },
 
     getPaginated: function (self) {
@@ -156,36 +135,12 @@ define(['jquery', 'moment'],
           body.find('.pagination a').addClass('hidden');
           body[0].scrollIntoView(true);
         }
-
-        if (body.find('.container.last article').length < 1) {
-          $.getJSON('/subscription/all', function (data) {
-            if (data.posts) {
-              body.find('.subscriptions').empty();
-
-              for (var i = 0; i < data.posts.length; i ++) {
-                body.find('.subscriptions').append(generatePost(data.posts[i], false, true));
-              }
-            }
-          });
-        }
       });
     },
 
     deleteOne: function (self) {
       $.post(self.data('url'), function (data) {
         self.closest('article').addClass('hidden');
-      });
-    },
-
-    share: function (self) {
-      $.post('/share', { url: self.data('url') }, function (data) {
-        body.find('.messages').prepend(generatePost(data.post, true, false));
-      });
-    },
-
-    deleteSubscription: function (self) {
-      $.post('/subscription/unsubscribe', { url: self.data('url') }, function (data) {
-        self.closest('li').addClass('hidden');
       });
     }
   };
