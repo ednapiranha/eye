@@ -395,8 +395,10 @@ ul.manage a {
 
 .created {
     clear: both;
+    float: left;
     font-size: 25px;
     line-height: 30px;
+    margin-bottom: 40px;
 }
 
 @media only screen and (max-width: 800px) {
